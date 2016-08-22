@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ZeroOne
 {
-    class Program
+  public  class Program
     {
   
         //public static string Convert(int n)
@@ -30,8 +30,22 @@ namespace ZeroOne
         //    bitConversion.Reverse();
         //    return bitConversion;
         //}
+
+      public static int Test(int N)
+      {
+
+            Int64 S = 0;
+            for (int i = 1; i < 100000; i++)
+            {
+                S = Convert.ToInt64(Convert.ToString(i, 2));
+                if (S % N == 0) break;
+            }
+          return (int) S;
+
+      }
     
-        static void Main(string[] args)
+
+      static void Main(string[] args)
         {
             while (true)
             {
